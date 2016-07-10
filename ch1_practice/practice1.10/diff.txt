@@ -1,0 +1,922 @@
+--- go_file	2016-07-10 21:12:47 +0900
++++ go_file_second	2016-07-10 21:13:03 +0900
+@@ -2400,58 +2400,58 @@
+ imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_btn_all_off.gif"  >総合</li>
+ 
+ 
+-<li gid="100026" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_off.gif"  >パソコン・周辺機器</li>
++<li gid="564500" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_off.gif"  >タブレットPC・スマホ</li>
+ 
+ 
+ 
+ 
+-<li gid="100533" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_baby_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_baby_off.gif"  >キッズ・ベビー</li>
++<li gid="100939" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_off.gif"  >美容・コスメ・香水</li>
+ 
+ 
+ 
+ 
+-<li gid="503190" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_off.gif"  >車用品・バイク用品</li>
++<li gid="100005" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_flower_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_flower_off.gif"  >花・ガーデン・DIY</li>
+ 
+ 
+ 
+ 
+-<li gid="558944" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_off.gif"  >キッチン用品・食器</li>
++<li gid="510901" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sake_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sake_off.gif"  >日本酒・焼酎</li>
+ 
+ 
+ 
+ 
+-<li gid="510915" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_off.gif"  >ビール・洋酒</li>
++<li gid="211742" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_off.gif"  >TV・オーディオ・カメラ</li>
+ 
+ 
+ 
+ 
+-<li gid="100227" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_off.gif"  >食品</li>
++<li gid="562637" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_off.gif"  >家電</li>
+ 
+ 
+ 
+ 
+-<li gid="100316" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_drink_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_drink_off.gif"  >水・ソフトドリンク</li>
++<li gid="101070" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_off.gif"  >スポーツ・アウトドア</li>
+ 
+ 
+ 
+ 
+-<li gid="101164" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_off.gif"  >おもちゃ・ホビー・ゲーム</li>
++<li gid="100227" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_off.gif"  >食品</li>
+ 
+ 
+ 
+@@ -2463,149 +2463,149 @@
+ 
+ 
+ 
+-<li gid="100433" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_inner_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_inner_off.gif"  >インナー・下着</li>
++<li gid="216129" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_off.gif"  >ジュエリー・アクセサリー</li>
+ 
+ 
+ 
+ 
+-<li gid="564500" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_off.gif"  >タブレットPC・スマホ</li>
++<li gid="101213" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_off.gif"  >ペットフード・ペット用品</li>
+ 
+ 
+ 
+ 
+-<li gid="101077" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_off.gif"  >ゴルフ</li>
++<li gid="100371" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_off.gif"  >レディースファッション</li>
+ 
+ 
+ 
+ 
+-<li gid="510901" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sake_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sake_off.gif"  >日本酒・焼酎</li>
++<li gid="100533" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_baby_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_baby_off.gif"  >キッズ・ベビー</li>
+ 
+ 
+ 
+ 
+-<li gid="100005" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_flower_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_flower_off.gif"  >花・ガーデン・DIY</li>
++<li gid="558885" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_off.gif"  >靴</li>
+ 
+ 
+ 
+ 
+-<li gid="101070" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_off.gif"  >スポーツ・アウトドア</li>
++<li gid="215783" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_off.gif"  >日用品雑貨・文房具</li>
+ 
+ 
+ 
+ 
+-<li gid="565004" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_off.gif"  >光回線・モバイル通信</li>
++<li gid="101164" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_off.gif"  >おもちゃ・ホビー・ゲーム</li>
+ 
+ 
+ 
+ 
+-<li gid="101240" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_off.gif"  >CD・DVD・楽器</li>
++<li gid="216131" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_off.gif"  >バッグ・ブランド</li>
+ 
+ 
+ 
+ 
+-<li gid="200162" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_off.gif"  >本・雑誌・コミック</li>
++<li gid="100316" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_drink_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_drink_off.gif"  >水・ソフトドリンク</li>
+ 
+ 
+ 
+ 
+-<li gid="216131" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_off.gif"  >バッグ・ブランド</li>
++<li gid="101240" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_off.gif"  >CD・DVD・楽器</li>
+ 
+ 
+ 
+ 
+-<li gid="101213" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_off.gif"  >ペットフード・ペット用品</li>
++<li gid="100026" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_off.gif"  >パソコン・周辺機器</li>
+ 
+ 
+ 
+ 
+-<li gid="101438" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_service_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_service_off.gif"  >学び・サービス</li>
++<li gid="101077" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_off.gif"  >ゴルフ</li>
+ 
+ 
+ 
+ 
+-<li gid="551167" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_off.gif"  >スイーツ・お菓子</li>
++<li gid="100938" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_off.gif"  >ダイエット・健康</li>
+ 
+ 
+ 
+ 
+-<li gid="100804" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_off.gif"  >インテリア・寝具・収納</li>
++<li gid="200162" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_off.gif"  >本・雑誌・コミック</li>
+ 
+ 
+ 
+ 
+-<li gid="558885" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_off.gif"  >靴</li>
++<li gid="551169" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_off.gif"  >医薬品・コンタクト・介護</li>
+ 
+ 
+ 
+ 
+-<li gid="551169" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_off.gif"  >医薬品・コンタクト・介護</li>
++<li gid="510915" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_off.gif"  >ビール・洋酒</li>
+ 
+ 
+ 
+ 
+-<li gid="562637" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_off.gif"  >家電</li>
++<li gid="551177" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_off.gif"  >メンズファッション</li>
+ 
+ 
+ 
+ 
+-<li gid="100371" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_off.gif"  >レディースファッション</li>
++<li gid="558944" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_off.gif"  >キッチン用品・食器</li>
+ 
+ 
+ 
+ 
+-<li gid="551177" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_off.gif"  >メンズファッション</li>
++<li gid="503190" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_off.gif"  >車用品・バイク用品</li>
+ 
+ 
+ 
+ 
+-<li gid="100939" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_off.gif"  >美容・コスメ・香水</li>
++<li gid="101438" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_service_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_service_off.gif"  >学び・サービス</li>
+ 
+ 
+ 
+ 
+-<li gid="215783" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_off.gif"  >日用品雑貨・文房具</li>
++<li gid="565004" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_off.gif"  >光回線・モバイル通信</li>
+ 
+ 
+ 
+@@ -2700,11 +2700,11 @@
+ 	></div>
+ 	<ul member="rnkDailyGenreList" style="display: none;">
+ 		<li 
+-		 	gid="404052"
++		 	gid="551221"
+ 			du="1"
+ 			ge="9"
+ 			offset="100"
+-		>ホース・リール</li>
++		>敷きパッド・パッドシーツ</li>
+ 	</ul>
+ 
+ 
+@@ -2738,11 +2738,11 @@
+ 	></div>
+ 	<ul member="rnkDailyGenreList" style="display: none;">
+ 		<li 
+-		 	gid="303803"
++		 	gid="304618"
+ 			du="1"
+ 			ge="9"
+ 			offset="100"
+-		>浴衣（女の子用）</li>
++		>桃</li>
+ 	</ul>
+ 
+ 
+@@ -2772,11 +2772,11 @@
+ 	></div>
+ 	<ul member="rnkDailyGenreList" style="display: none;">
+ 		<li 
+-		 	gid="304618"
++		 	gid="207050"
+ 			du="1"
+ 			ge="9"
+ 			offset="100"
+-		>桃</li>
++		>ヘアアクセサリー</li>
+ 	</ul>
+ 
+ 
+@@ -2843,30 +2843,30 @@
+ imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_btn_all_off.gif"  >総合</li>
+ 
+ 
+-<li gid="101213" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_off.gif"  >ペットフード・ペット用品</li>
++<li gid="551169" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_off.gif"  >医薬品・コンタクト・介護</li>
+ 
+ 
+ 
+ 
+-<li gid="100939" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_off.gif"  >美容・コスメ・香水</li>
++<li gid="216131" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_off.gif"  >バッグ・ブランド</li>
+ 
+ 
+ 
+ 
+-<li gid="216129" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_off.gif"  >ジュエリー・アクセサリー</li>
++<li gid="100227" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_off.gif"  >食品</li>
+ 
+ 
+ 
+ 
+-<li gid="558885" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_off.gif"  >靴</li>
++<li gid="100026" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_computer_off.gif"  >パソコン・周辺機器</li>
+ 
+ 
+ 
+@@ -2878,44 +2878,51 @@
+ 
+ 
+ 
+-<li gid="100804" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_off.gif"  >インテリア・寝具・収納</li>
++<li gid="100939" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_beauty_off.gif"  >美容・コスメ・香水</li>
+ 
+ 
+ 
+ 
+-<li gid="216131" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_bag_off.gif"  >バッグ・ブランド</li>
++<li gid="558885" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_shoes_off.gif"  >靴</li>
+ 
+ 
+ 
+ 
+-<li gid="100433" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_inner_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_inner_off.gif"  >インナー・下着</li>
++<li gid="503190" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_autogoods_off.gif"  >車用品・バイク用品</li>
+ 
+ 
+ 
+ 
+-<li gid="562637" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_off.gif"  >家電</li>
++<li gid="200162" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_off.gif"  >本・雑誌・コミック</li>
+ 
+ 
+ 
+ 
+-<li gid="101077" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_off.gif"  >ゴルフ</li>
++<li gid="215783" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_off.gif"  >日用品雑貨・文房具</li>
+ 
+ 
+ 
+ 
+-<li gid="558929" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_watch_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_watch_off.gif"  >腕時計</li>
++<li gid="101164" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_off.gif"  >おもちゃ・ホビー・ゲーム</li>
++
++
++
++
++<li gid="551177" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_off.gif"  >メンズファッション</li>
+ 
+ 
+ 
+@@ -2927,23 +2934,23 @@
+ 
+ 
+ 
+-<li gid="558944" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_off.gif"  >キッチン用品・食器</li>
++<li gid="551167" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_off.gif"  >スイーツ・お菓子</li>
+ 
+ 
+ 
+ 
+-<li gid="101070" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_off.gif"  >スポーツ・アウトドア</li>
++<li gid="100804" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_interior_off.gif"  >インテリア・寝具・収納</li>
+ 
+ 
+ 
+ 
+-<li gid="215783" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_daily_off.gif"  >日用品雑貨・文房具</li>
++<li gid="565004" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_off.gif"  >光回線・モバイル通信</li>
+ 
+ 
+ 
+@@ -2955,37 +2962,37 @@
+ 
+ 
+ 
+-<li gid="200162" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_book_off.gif"  >本・雑誌・コミック</li>
++<li gid="101213" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_pet_off.gif"  >ペットフード・ペット用品</li>
+ 
+ 
+ 
+ 
+-<li gid="101240" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_off.gif"  >CD・DVD・楽器</li>
++<li gid="101077" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_golf_off.gif"  >ゴルフ</li>
+ 
+ 
+ 
+ 
+-<li gid="564500" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_smartdevice_off.gif"  >タブレットPC・スマホ</li>
++<li gid="216129" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_accessories_off.gif"  >ジュエリー・アクセサリー</li>
+ 
+ 
+ 
+ 
+-<li gid="100938" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_off.gif"  >ダイエット・健康</li>
++<li gid="211742" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_off.gif"  >TV・オーディオ・カメラ</li>
+ 
+ 
+ 
+ 
+-<li gid="211742" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_electronics_off.gif"  >TV・オーディオ・カメラ</li>
++<li gid="100938" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_health_off.gif"  >ダイエット・健康</li>
+ 
+ 
+ 
+@@ -2997,9 +3004,9 @@
+ 
+ 
+ 
+-<li gid="101164" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_hobby_off.gif"  >おもちゃ・ホビー・ゲーム</li>
++<li gid="562637" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_appliance02_off.gif"  >家電</li>
+ 
+ 
+ 
+@@ -3011,44 +3018,37 @@
+ 
+ 
+ 
+-<li gid="100371" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_off.gif"  >レディースファッション</li>
+-
+-
+-
+-
+-<li gid="551169" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_medicine_off.gif"  >医薬品・コンタクト・介護</li>
++<li gid="510915" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_liquor_off.gif"  >ビール・洋酒</li>
+ 
+ 
+ 
+ 
+-<li gid="100227" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_food_off.gif"  >食品</li>
++<li gid="100371" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_lfashion_off.gif"  >レディースファッション</li>
+ 
+ 
+ 
+ 
+-<li gid="551177" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_mfashion_off.gif"  >メンズファッション</li>
++<li gid="101070" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sports_off.gif"  >スポーツ・アウトドア</li>
+ 
+ 
+ 
+ 
+-<li gid="551167" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_sweets02_off.gif"  >スイーツ・お菓子</li>
++<li gid="558944" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_kitchen_off.gif"  >キッチン用品・食器</li>
+ 
+ 
+ 
+ 
+-<li gid="565004" du="1" ge="9" offset="100"
+-imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_on.gif"
+-imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_telecom_off.gif"  >光回線・モバイル通信</li>
++<li gid="101240" du="1" ge="9" offset="100"
++imageurlon="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_on.gif"
++imageurloff="http://a.ichiba.jp.rakuten-static.com/com/inc/home/20080930/beta/tz/img/ranking_tab/ranking_cd_dvd_off.gif"  >CD・DVD・楽器</li>
+ 
+ 
+ 
+@@ -3710,20 +3710,19 @@
+ <h3>最近チェックしたジャンル</h3>
+ <ul>
+ <li>
+-
+-<a sc_linkName="use_genre41" href="http://www.rakuten.co.jp/category/watch/">腕時計</a>
++<a sc_linkName="use_genre31" href="http://www.rakuten.co.jp/category/interior/">インテリア・収納</a>
+ </li>
+ <li>
+-<a sc_linkName="use_genre08" href="http://www.rakuten.co.jp/category/computer/">パソコン・周辺機器</a>
++<a sc_linkName="use_genre12" href="http://www.rakuten.co.jp/category/game/">ゲーム</a>
+ </li>
+ <li>
+-<a sc_linkName="use_genre05" href="http://event.rakuten.co.jp/telecommunication/">光回線・モバイル通信</a>
++<a sc_linkName="use_genre36" href="http://www.rakuten.co.jp/category/golf/">ゴルフ用品</a>
+ </li>
+ <li>
+-<a sc_linkName="use_genre36" href="http://www.rakuten.co.jp/category/golf/">ゴルフ用品</a>
++<a sc_linkName="use_genre15" href="http://www.rakuten.co.jp/category/food/">食品</a>
+ </li>
+ <li class="last">
+-<a sc_linkName="use_genre15" href="http://www.rakuten.co.jp/category/food/">食品</a>
++<a sc_linkName="use_genre04" href="http://www.rakuten.co.jp/category/fashiongoods/">バッグ・小物・ブランド雑貨</a>
+ </li>
+ </ul>
+ 
+@@ -4484,7 +4483,7 @@
+ 
+ 
+ 
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fad2.trafficgate.net%2Ft%2Fr%2F9080%2F1441%2F99636_99636%2F&D2=3.8611.68708.908034.32179450&C3=8847f3768e2ac48f2245459c1ca07ca1b6378186"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/20160708/215x90_r.gif" alt="期間限定！楽天カード入会&利用で7,000ポイント" width="215"  height="90"  hspace="0"  vspace="0"  border=0></a>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fad2.trafficgate.net%2Ft%2Fr%2F9080%2F1441%2F99636_99636%2F&D2=3.8611.68708.908034.32179448&C3=8847f3768e2ac48f2245459c1ca07ca1b6378186"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/20160708/215x90_r.gif" alt="期間限定！楽天カード入会&利用で7,000ポイント" width="215"  height="90"  hspace="0"  vspace="0"  border=0></a>
+ 
+ 
+ 
+@@ -4609,24 +4608,24 @@
+ <div class="liquidBanner-list" style="display:none;width:140px;">
+ <ul class="clfx"><!--
+ --><li><div class="videoBox">
+-<a sc_linkName="rstv_top_0014" href="http://event.rakuten.co.jp/supertv/article/detail/617/"><div class="icnViewVid"></div>
+-<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201506/150629_softcream_400x280.jpg" width="200" height="140" border="0"><br>ホームパーティが盛り上がる！手作りソフトクリームメーカー</a></div>
++<a sc_linkName="rstv_top_0046" href="http://event.rakuten.co.jp/supertv/article/detail/614/"><div class="icnViewVid"></div>
++<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201506/150623_panasonicq_400x280.jpg" width="200" height="140" border="0"><br>吸い込んだ風量が約7倍になる！蓼科高原の風も体感できるぞ！</a></div>
+ </li><!--
+ --><li><div class="videoBox">
+ <a sc_linkName="rstv_top_0012" href="http://event.rakuten.co.jp/supertv/article/detail/643/"><div class="icnViewVid"></div>
+ <img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201508/150805_storagebench_400x280.jpg" width="200" height="140" border="0"><br>ゆったり2人掛け！大容量の収納スペースを装備したベンチ</a></div>
+ </li><!--
+ --><li><div class="videoBox">
+-<a sc_linkName="rstv_top_0098" href="http://event.rakuten.co.jp/supertv/article/detail/857/"><div class="icnViewVid"></div>
+-<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201606/160617_dyson_400x280.jpg" width="200" height="140" border="0"><br>変わらない吸引力で家中のあらゆるところが綺麗になっちゃう！</a></div>
++<a sc_linkName="rstv_top_0014" href="http://event.rakuten.co.jp/supertv/article/detail/617/"><div class="icnViewVid"></div>
++<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201506/150629_softcream_400x280.jpg" width="200" height="140" border="0"><br>ホームパーティが盛り上がる！手作りソフトクリームメーカー</a></div>
+ </li><!--
+ --><li><div class="videoBox">
+ <a sc_linkName="rstv_top_0092" href="http://event.rakuten.co.jp/supertv/article/detail/858/"><div class="icnViewVid"></div>
+ <img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201606/160621_gratiae_400x280.jpg" width="200" height="140" border="0"><br>輝くストーンで華やか。エレガントな装いに合うヘアアクセ</a></div>
+ </li><!--
+ --><li><div class="videoBox">
+-<a sc_linkName="rstv_top_0046" href="http://event.rakuten.co.jp/supertv/article/detail/614/"><div class="icnViewVid"></div>
+-<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201506/150623_panasonicq_400x280.jpg" width="200" height="140" border="0"><br>吸い込んだ風量が約7倍になる！蓼科高原の風も体感できるぞ！</a></div>
++<a sc_linkName="rstv_top_0098" href="http://event.rakuten.co.jp/supertv/article/detail/857/"><div class="icnViewVid"></div>
++<img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/supertv/201606/160617_dyson_400x280.jpg" width="200" height="140" border="0"><br>変わらない吸引力で家中のあらゆるところが綺麗になっちゃう！</a></div>
+ </li><!--
+ --><li><div class="videoBox">
+ <a sc_linkName="rstv_top_0097" href="http://event.rakuten.co.jp/supertv/article/detail/868/"><div class="icnViewVid"></div>
+@@ -4770,11 +4769,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fac.ebis.ne.jp%2Ftr_set.php%3Fargument%3DZMhPE4GP%26ai%3Drgp_ich_160701_05&D2=3.8611.68708.907371.32176250&C3=46723d45b96d1cc2cd854916fcdd76abaa0cf295">
+-<dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/logo_mobile.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174x174_a.gif"></dd>
+-<dd class="rakuten-group-detail">格安スマホ！月額1,250円~ </dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fad2.trafficgate.net%2Ft%2Fr%2F391%2F5643%2F255739_315741%2F&D2=3.8611.68708.907371.32111354&C3=de94624a3ff7230e6d099a9c0f0b7138d45c4f3b ">
++<dl class="rakuten-group-life">
++<dt class="rakuten-group-ttl">楽天生命</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201512_GroupCampaign/seimei_151225_174x174.gif"></dd>
++<dd class="rakuten-group-detail">今すぐお受取りください！ゴールド会員様以上限定特典</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4783,12 +4782,14 @@
+ 
+ 
+ 
++
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fbooks.rakuten.co.jp%2Finfo%2Fspecial-price-sale%2Fall%2F%3Fscid%3Dwi_grp_gmx_boo_ich_top_grpcpn_02&D2=3.8611.68708.907371.32158490&C3=befb6c91373dbaaabafa40cfa9538273814d136c">
+-<dl class="rakuten-group-books">
+-<dt class="rakuten-group-ttl">楽天ブックス</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/toprenewal/groupcampaign/0811/group_books_img.jpg"></dd>
+-<dd class="rakuten-group-detail">全品送料無料！</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fr10.to%2FhsxjFa&D2=3.8611.68708.907371.32137284&C3=c242569a15a4162976ccd9935ed0e3f645ca857d">
++<dl class="rakuten-group-racoupon">
++<dt class="rakuten-group-ttl">買うクーポン</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201601_GroupCampaign/haagen174x174.jpg"></dd>
++<dd class="rakuten-group-detail">参加無料のキャンペーン！
++</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4812,12 +4813,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Faffiliate.rakuten.co.jp%2Fcampaign%2F2016%2Fsummerh%2F%3Fscid%3Dwi_grp_gmx_afi_ich_top_grpcpn_160607&D2=3.8611.68708.907371.32170194&C3=a532cac366ba184e7ed72874591854346a928810">
+-<dl class="rakuten-group-affiliate">
+-<dt class="rakuten-group-ttl">楽天アフィリエイト</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/afi_0607.png"></dd>
+-<dd class="rakuten-group-detail">必ずもらえる100ポイント！
+-</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fad2.trafficgate.net%2Ft%2Fr%2F8448%2F1441%2F99636_99636%2F&D2=3.8611.68708.907371.32178814&C3=70d2aa2358a8a2b778e9dfdc417d476484df75e4">
++<dl class="rakuten-group-card">
++<dt class="rakuten-group-ttl">楽天カード</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174x174_r7fix.gif"></dd>
++<dd class="rakuten-group-detail">年会費永年無料の楽天カード</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4826,12 +4826,13 @@
+ 
+ 
+ 
++
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fenergy.rakuten.co.jp%2Fcampaign%2Fmachidenki_biz%2F201605_pointback%2F%3Fscid%3Dwi_grp_gmx_ene_ich_top_grpcpn_201605_pointback&D2=3.8611.68708.907371.32176254&C3=55a83723d9710b4187615a09e64dd448a2cb6fed">
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Frakuten.fm%2Fintro%2F%3Fscid%3Dwi_grp_gmx_rfm_ich_top_grpcpn_174x174bannerforfm&D2=3.8611.68708.907371.32176253&C3=b1d21a9d34a2dc256731f6e594546eea73ea703a">
+ <dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/logo_energy.png" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174x174_energy.png"></dd>
+-<dd class="rakuten-group-detail">楽天の電気でおトクに♪</dd>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/fm_logo_174_30.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174_174_fm.jpg"></dd>
++<dd class="rakuten-group-detail">Rakuten.FM 始動</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4841,11 +4842,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fbooks.rakuten.co.jp%2Franking%2Fhourly%2F101%2F%23%21%2F1%3Fscid%3Dwi_grp_gmx_kob_ich_top_grpcpn&D2=3.8611.68708.907371.32111352&C3=1d8ef45da81972b5f09ab2c9708437e87dbb4ab4">
++<a href="https://rd.rakuten.co.jp/s/?R2=https%3A%2F%2Fpremium.rakuten.co.jp%2Fpromotion%2F%3Fl-id%3Dwi_grp_gmx_prm_ich_top_grpcpn&D2=3.8611.68708.907371.32159108&C3=bc507611a5397fe6511de4b7dd74b79ccd41a79e">
+ <dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/kobo_logo.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/toprenewal/groupcampaign/0811/group_kobo_img.jpg"></dd>
+-<dd class="rakuten-group-detail">楽天Koboの電子書籍ランキング</dd>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201512_GroupCampaign/premium_logo_174x30.gif" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201605_GroupCampaign/02_premium_0513.jpg"></dd>
++<dd class="rakuten-group-detail">送料分をポイント還元！</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4855,12 +4856,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fr10.to%2FhsxjFa&D2=3.8611.68708.907371.32137284&C3=c242569a15a4162976ccd9935ed0e3f645ca857d">
+-<dl class="rakuten-group-racoupon">
+-<dt class="rakuten-group-ttl">買うクーポン</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201601_GroupCampaign/haagen174x174.jpg"></dd>
+-<dd class="rakuten-group-detail">参加無料のキャンペーン！
+-</dd>
++<a href="https://rd.rakuten.co.jp/s/?R2=https%3A%2F%2Fyoung.rakuten.co.jp%2Fpromotion%2F%3Fl-id%3Dwi_grp_gmx_yng_ich_top_grpcpn_tokushu_1&D2=3.8611.68708.907371.32139041&C3=b5eed8c2d4c2fbe8d0cd11cfeb0b851b96a4a0f8">
++<dl>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201603_GroupCampaign/Gakuwari_logo.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201603_GroupCampaign/gakuwari_174x174.jpg"></dd>
++<dd class="rakuten-group-detail">送料無料の「楽天学割」</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4884,11 +4884,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fv6.advg.jp%2Fadpv6%2Fr%2F7t7_5xod&D2=3.8611.68708.907371.32139040&C3=8e0fb0a6ea9039d15f66a14a267a3871c509461b">
+-<dl class="rakuten-group-security">
+-<dt class="rakuten-group-ttl">楽天証券</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/sec_gold.png"></dd>
+-<dd class="rakuten-group-detail">純金積立でポイントゲット</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fenergy.rakuten.co.jp%2Fcampaign%2Fmachidenki_biz%2F201605_pointback%2F%3Fscid%3Dwi_grp_gmx_ene_ich_top_grpcpn_201605_pointback&D2=3.8611.68708.907371.32176254&C3=55a83723d9710b4187615a09e64dd448a2cb6fed">
++<dl>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/logo_energy.png" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174x174_energy.png"></dd>
++<dd class="rakuten-group-detail">楽天の電気でおトクに♪</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4897,13 +4897,12 @@
+ 
+ 
+ 
+-
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fr10.to%2FhsQ7Iy&D2=3.8611.68708.907371.32154529&C3=37eb61e85a6f944f5f0224f732fad00336097895">
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fbooks.rakuten.co.jp%2Franking%2Fhourly%2F101%2F%23%21%2F1%3Fscid%3Dwi_grp_gmx_kob_ich_top_grpcpn&D2=3.8611.68708.907371.32111352&C3=1d8ef45da81972b5f09ab2c9708437e87dbb4ab4">
+ <dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201602_GroupCampaign/appichiba_logo.gif" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/174x174_apli0603.jpg"></dd>
+-<dd class="rakuten-group-detail">初回利用限定！150ポイントプレゼント！</dd>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/kobo_logo.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/toprenewal/groupcampaign/0811/group_kobo_img.jpg"></dd>
++<dd class="rakuten-group-detail">楽天Koboの電子書籍ランキング</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4913,11 +4912,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Finsurance.rakuten.co.jp%2Fcar%2F%3Fcarlp%3Drn22%26scid%3Dwi_grp_gmx_hkn_ich_top_grpcpn_ins01_test&D2=3.8611.68708.907371.32128230&C3=892801ecdb12c41f4163726e93faca0a0bd75936">
+-<dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201601_GroupCampaign/174_30_hokenlogo.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201602_GroupCampaign/174x174_20160218.png"></dd>
+-<dd class="rakuten-group-detail">見積もるだけでポイント進呈</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fv6.advg.jp%2Fadpv6%2Fr%2F7t7_5xod&D2=3.8611.68708.907371.32139040&C3=8e0fb0a6ea9039d15f66a14a267a3871c509461b">
++<dl class="rakuten-group-security">
++<dt class="rakuten-group-ttl">楽天証券</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/sec_gold.png"></dd>
++<dd class="rakuten-group-detail">純金積立でポイントゲット</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4926,12 +4925,13 @@
+ 
+ 
+ 
++
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Frakuten.fm%2Fintro%2F%3Fscid%3Dwi_grp_gmx_rfm_ich_top_grpcpn_174x174bannerforfm&D2=3.8611.68708.907371.32176253&C3=b1d21a9d34a2dc256731f6e594546eea73ea703a">
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Febates.rakuten.co.jp%2F%3Fscid%3Dwi_grp_gmx_ich_ich_top_grpcpn_rebates&D2=3.8611.68708.907371.32176282&C3=1760b2fff31838dd6f74f244b9331f0099fa3da5">
+ <dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/fm_logo_174_30.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174_174_fm.jpg"></dd>
+-<dd class="rakuten-group-detail">Rakuten.FM 始動</dd>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/logo_rebates.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/pctop_group_rebates.jpg"></dd>
++<dd class="rakuten-group-detail">あの通販サイトでもポイントが貯まる</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4941,11 +4941,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fwww.rakuten-bank.co.jp%2Fhome-loan%2Flp%2Fg-refinance.html%3Fscid%3Dwi_grp_gmx_ztl_ich_top_grpcpn_column201512_pc_a&D2=3.8611.68708.907371.32132615&C3=c15a697afea456becde74a3f617bd78362e2d97a">
+-<dl class="rakuten-group-bank">
+-<dt class="rakuten-group-ttl">楽天銀行</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201603_GroupCampaign/174x174_01.jpg"></dd>
+-<dd class="rakuten-group-detail">住宅ローンかんたん比較</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fbooks.rakuten.co.jp%2Finfo%2Fspecial-price-sale%2Fall%2F%3Fscid%3Dwi_grp_gmx_boo_ich_top_grpcpn_02&D2=3.8611.68708.907371.32158490&C3=befb6c91373dbaaabafa40cfa9538273814d136c">
++<dl class="rakuten-group-books">
++<dt class="rakuten-group-ttl">楽天ブックス</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/toprenewal/groupcampaign/0811/group_books_img.jpg"></dd>
++<dd class="rakuten-group-detail">全品送料無料！</dd>
+ </dl>
+ </a>
+ </li>
+@@ -4984,11 +4984,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fwww.rakuten-bank.co.jp%2Faccount%2Fcampaign%2Faccount5times.html%3Fscid%3Dwi_grp_gmx_bnk_ich_top_grpcpn_5times&D2=3.8611.68708.907371.32156391&C3=15279aebdc185263c5d947d7e3e5daee81a39262">
+-<dl class="rakuten-group-bank">
+-<dt class="rakuten-group-ttl">楽天銀行</dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201605_GroupCampaign/174_174_bank.jpg"></dd>
+-<dd class="rakuten-group-detail">簡単3分口座開設でお買い物5倍！</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fac.ebis.ne.jp%2Ftr_set.php%3Fargument%3DZMhPE4GP%26ai%3Drgp_ich_160701_05&D2=3.8611.68708.907371.32176250&C3=46723d45b96d1cc2cd854916fcdd76abaa0cf295">
++<dl>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/logo_mobile.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/174x174_a.gif"></dd>
++<dd class="rakuten-group-detail">格安スマホ！月額1,250円~ </dd>
+ </dl>
+ </a>
+ </li>
+@@ -4998,11 +4998,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="https://rd.rakuten.co.jp/s/?R2=https%3A%2F%2Fmart.rakuten.co.jp%2Fritem%2Fapp%2Fcatalog%2Flist%2Finit%3FsearchCategoryCode%3D9092303%26alignmentSequence%3D1%26mode%3Dimage%26scid%3Dwi_grp_gmx_mart_ich_top_grpcpn_kyoto_0708&D2=3.8611.68708.907371.32178815&C3=ee2d0024a7716f2e437bafff41db2a368cf649ee">
+-<dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201606_GroupCampaign/mart_logo174x30.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201607_GroupCampaign/mart0706c.jpg"></dd>
+-<dd class="rakuten-group-detail">ネットスーパー[楽天マート]</dd>
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Fwww.rakuten-bank.co.jp%2Faccount%2Fcampaign%2Faccount5times.html%3Fscid%3Dwi_grp_gmx_bnk_ich_top_grpcpn_5times&D2=3.8611.68708.907371.32156391&C3=15279aebdc185263c5d947d7e3e5daee81a39262">
++<dl class="rakuten-group-bank">
++<dt class="rakuten-group-ttl">楽天銀行</dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201605_GroupCampaign/174_174_bank.jpg"></dd>
++<dd class="rakuten-group-detail">簡単3分口座開設でお買い物5倍！</dd>
+ </dl>
+ </a>
+ </li>
+@@ -5012,11 +5012,11 @@
+ 
+ 
+ <li class="rakuten-group-contents">
+-<a href="https://rd.rakuten.co.jp/s/?R2=https%3A%2F%2Fyoung.rakuten.co.jp%2Fpromotion%2F%3Fl-id%3Dwi_grp_gmx_yng_ich_top_grpcpn_tokushu_1&D2=3.8611.68708.907371.32139041&C3=b5eed8c2d4c2fbe8d0cd11cfeb0b851b96a4a0f8">
++<a href="http://rd.rakuten.co.jp/s/?R2=http%3A%2F%2Finsurance.rakuten.co.jp%2Fcar%2F%3Fcarlp%3Drn22%26scid%3Dwi_grp_gmx_hkn_ich_top_grpcpn_ins01_test&D2=3.8611.68708.907371.32128230&C3=892801ecdb12c41f4163726e93faca0a0bd75936">
+ <dl>
+-<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201603_GroupCampaign/Gakuwari_logo.jpg" width="174" height="30"></dt>
+-<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201603_GroupCampaign/gakuwari_174x174.jpg"></dd>
+-<dd class="rakuten-group-detail">送料無料の「楽天学割」</dd>
++<dt class="rakuten-group-ttl-img"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201601_GroupCampaign/174_30_hokenlogo.jpg" width="174" height="30"></dt>
++<dd class="rakuten-group-image"><img src="http://a.ichiba.jp.rakuten-static.com/com/img/thumb/200309/event/201602_GroupCampaign/174x174_20160218.png"></dd>
++<dd class="rakuten-group-detail">見積もるだけでポイント進呈</dd>
+ </dl>
+ </a>
+ </li>

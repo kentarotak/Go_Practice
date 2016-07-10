@@ -1,0 +1,11 @@
+C:\Users\kentaro\go_practice\src\gopl.io\ch1\fetchall>main.exe http://www.rakute
+n.co.jp/
+0.31s   349159  http://www.rakuten.co.jp/
+0.31s elapsed
+
+C:\Users\kentaro\go_practice\src\gopl.io\ch1\fetchall>main.exe http://www.rakute
+n.co.jp/
+0.20s   349102  http://www.rakuten.co.jp/
+0.20s elapsed
+
+C:\Users\kentaro\go_practice\src\gopl.io\ch1\fetchall>
