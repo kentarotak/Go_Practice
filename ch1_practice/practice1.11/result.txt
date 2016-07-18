@@ -1,0 +1,28 @@
+C:\Users\kentaro\go_practice\src\gopl.io\ch1\fetchall>main.exe http://http://www
+.nikkei.com/ http://www.rakuten.co.jp/ https://www.amazon.co.jp/ https://twitter
+.com/ https://www.google.co.jp/ https://www.youtube.com/ https://www.facebook.co
+m/ http://www.baidu.com/ http://http://www.nikkei.com/ http://www.rakuten.co.jp/
+ https://www.amazon.co.jp/ https://twitter.com/ https://www.google.co.jp/ http
+//www.youtube.com/ https://www.facebook.com/ http://www.baidu.com/ https://www.y
+ahoo.com/
+Get http://http://www.nikkei.com/: dial tcp: lookup http: getaddrinfow: No such
+host is known.
+Get http://http://www.nikkei.com/: dial tcp: lookup http: getaddrinfow: No such
+host is known.
+5.88s   315954  http://www.rakuten.co.jp/
+6.13s   315954  http://www.rakuten.co.jp/
+6.29s    99362  http://www.baidu.com/
+6.30s    99538  http://www.baidu.com/
+8.83s   859798  https://www.youtube.com/
+9.50s    10730  https://www.google.co.jp/
+9.74s    10667  https://www.google.co.jp/
+10.54s   468088  https://www.youtube.com/
+Get https://twitter.com/: net/http: TLS handshake timeout
+12.14s   453751  https://www.yahoo.com/
+12.72s    64301  https://www.facebook.com/
+14.42s   246092  https://twitter.com/
+14.53s    64141  https://www.facebook.com/
+17.61s   515889  https://www.amazon.co.jp/
+18.25s   501475  https://www.amazon.co.jp/
+18.26s elapsed
+
