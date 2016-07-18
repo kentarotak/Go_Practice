@@ -7,8 +7,8 @@ import (
 
 func TestPtoG(t *testing.T) {
 	var tests = []struct {
-		testval pound
-		expect  gram
+		testval Pound
+		expect  Gram
 	}{
 		{0, 0},
 		{1000, 453592},
@@ -23,15 +23,15 @@ func TestPtoG(t *testing.T) {
 
 func TestGtoP(t *testing.T) {
 	var tests = []struct {
-		testval gram
-		expect  pound
+		testval Gram
+		expect  Pound
 	}{
 		{0, 0},
 		{1000, 2},
 	}
 
 	for _, test := range tests {
-		if got := GtoP(test.testval); pound(math.Trunc(float64(got))) != test.expect {
+		if got := GtoP(test.testval); Pound(math.Trunc(float64(got))) != test.expect {
 			t.Errorf("MToFTest(%q) = %v", test.expect, got)
 		}
 	}

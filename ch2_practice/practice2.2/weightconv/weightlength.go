@@ -1,10 +1,15 @@
 package weightconv
 
-type pound float64
-type gram float64
+import "fmt"
 
-func PtoG(p pound) gram { return gram(p * 453.592) }
+type Pound float64
+type Gram float64
 
-func GtoP(g gram) pound { return pound(g / 453.592) }
+func PtoG(p Pound) Gram { return Gram(p * 453.592) }
+
+func GtoP(g Gram) Pound { return Pound(g / 453.592) }
+
+func (p Pound) String() string { return fmt.Sprintf("%g pound", p) }
+func (g Gram) String() string  { return fmt.Sprintf("%g gram", g) }
 
 //!-
