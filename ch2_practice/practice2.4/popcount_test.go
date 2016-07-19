@@ -70,6 +70,6 @@ func BenchmarkPopCountByLoop(b *testing.B) {
 
 func BenchmarkPopCountByShifting(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		PopCountByLoop(0x1234567890ABCDEF)
+		PopCountByShifting(0x1234567890ABCDEF)
 	}
 }
