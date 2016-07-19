@@ -1,0 +1,5 @@
+PASS
+BenchmarkPopCount-4          	300000000	         5.62 ns/op
+BenchmarkPopCountByLoop-4    	100000000	        14.1 ns/op
+BenchmarkPopCountByShifting-4	100000000	        14.2 ns/op
+ok  	github.com/kentarotak/Go_Practice/ch2_practice/practice2.4	5.271s
