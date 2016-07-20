@@ -48,7 +48,6 @@ func countLines(f *os.File, counts map[string]int) {
 	// NOTE: ignoring potential errors from input.Err()
 }
 
-// オーバーロードできない..
 func filecountLines(f *os.File, counts map[string]int, filename string, filenames map[string]string) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
