@@ -1,49 +1,54 @@
 package tempconv
 
 import (
-	"testing"
 	"math"
+	"testing"
 )
 
-func TestCToF(t *testing.T){
+var epsilon float64
+
+func TestCToF(t *testing.T) {
 	var tests = []struct {
 		testval Celsius
-		expect Fahrenheit
+		expect  Fahrenheit
 	}{
-		{-17.2, 1.0},
-		{-14.4, 6.0},
+		{-17.2, 1.00},
+		{-14.4, 6.07},
 		{0, 32.00},
 	}
 
 	for _, test := range tests {
-		if got := CToF(test.testval); Fahrenheit(math.Trunc(float64(got))) != test.expect {
+		got := CToF(test.testval)
+		epsilon = math.Abs(float64(got - test.expect))
+		if epsilon > 0.1 {
 			t.Errorf("CToFTest(%q) = %v", test.expect, got)
 		}
 	}
 }
 
-func TestFToC(t *testing.T){
+func TestFToC(t *testing.T) {
 	var tests = []struct {
 		testval Fahrenheit
-		expect Celsius
+		expect  Celsius
 	}{
-		{1.0, -17},
-		{6.0, -14},
+		{1.0, -17.2},
+		{6.0, -14.4},
 		{32.0, 0},
 	}
 
 	for _, test := range tests {
-		if got := FToC(test.testval); Celsius(math.Trunc(float64(got))) != test.expect {
+		got := FToC(test.testval)
+		epsilon = math.Abs(float64(got - test.expect))
+		if epsilon > 0.1 {
 			t.Errorf("FToCTest(%q) = %v", test.expect, got)
 		}
 	}
 }
 
-
-func TestKToC(t *testing.T){
+func TestKToC(t *testing.T) {
 	var tests = []struct {
 		testval Kelvin
-		expect Celsius
+		expect  Celsius
 	}{
 		{0, -273.15},
 		{373.15, 100},
@@ -56,10 +61,10 @@ func TestKToC(t *testing.T){
 	}
 }
 
-func TestCToK(t *testing.T){
+func TestCToK(t *testing.T) {
 	var tests = []struct {
 		testval Celsius
-		expect Kelvin
+		expect  Kelvin
 	}{
 		{-273.15, 0},
 		{100, 373.15},
@@ -72,10 +77,10 @@ func TestCToK(t *testing.T){
 	}
 }
 
-func TestKToF(t *testing.T){
+func TestKToF(t *testing.T) {
 	var tests = []struct {
 		testval Kelvin
-		expect Fahrenheit
+		expect  Fahrenheit
 	}{
 		{273.15, 32},
 	}
@@ -87,10 +92,10 @@ func TestKToF(t *testing.T){
 	}
 }
 
-func TestFToK(t *testing.T){
+func TestFToK(t *testing.T) {
 	var tests = []struct {
 		testval Fahrenheit
-		expect Kelvin
+		expect  Kelvin
 	}{
 		{32, 273.15},
 	}
