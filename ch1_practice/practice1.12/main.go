@@ -70,7 +70,7 @@ func lissajous(out io.Writer, prm map[string][]string) {
 	)
 	cycles := 5 // number of complete x oscillator revolutions
 
-	if prm["cycles"][0] != "" {
+	if prm != nil {
 		cycles, _ = strconv.Atoi(prm["cycles"][0])
 	}
 
