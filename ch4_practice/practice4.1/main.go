@@ -16,16 +16,6 @@ func main() {
 	c1 := sha256.Sum256([]byte("x"))
 	c2 := sha256.Sum256([]byte("X"))
 
-	var test1 byte
-
-	test1 = 0xFF
-
-	a := uint16(test1)
-
-	fmt.Printf("比較結果=%d\n", a)
-
-	test := [2]byte{0xFF, 0xFF}
-
 	fmt.Printf("比較結果=%d\n", compareSHA(c1, c2))
 }
 
