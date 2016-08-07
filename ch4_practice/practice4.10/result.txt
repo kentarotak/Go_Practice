@@ -1,0 +1,37 @@
+16 issues:
+2016
+★★１年以上経過のIssues★★
+2013-06-11 16:23:53 +0000 UTC
+#5680    eaigner encoding/json: set key converter on en/decoder
+2014-09-04 20:00:43 +0000 UTC
+#8658  gopherbot encoding/json: use bufio
+2013-07-17 16:39:15 +0000 UTC
+#5901        rsc encoding/json: allow override type marshaling
+2014-04-26 17:47:25 +0000 UTC
+#7872  extempora encoding/json: Encoder internally buffers full output
+2013-11-04 18:59:03 +0000 UTC
+#6716  gopherbot encoding/json: include field name in unmarshal error me
+2013-09-14 01:13:28 +0000 UTC
+#6384    joeshaw encoding/json: encode precise floating point integers u
+2013-10-23 17:19:48 +0000 UTC
+#6647    btracey x/tools/cmd/godoc: display type kind of each named type
+2014-09-12 21:56:36 +0000 UTC
+#8717    dvyukov cmd/compile: random performance fluctuations after unre
+2012-10-11 22:13:08 +0000 UTC
+#4237  gjemiller encoding/base64: URLEncoding padding is optional
+★★１年未満かつ1か月以上経過のIssues★★
+2015-06-03 19:25:08 +0000 UTC
+#11046     kurin encoding/json: Decoder internally buffers full input
+2016-04-15 05:19:15 +0000 UTC
+#15314    okdave proposal: some way to reject unknown fields in encoding
+2016-06-29 16:07:36 +0000 UTC
+#16212 josharian encoding/json: do all reflect work before decoding
+2016-04-06 02:18:48 +0000 UTC
+#15146 chanxueho encoding/json: ",string" bool field accepts "terrible" 
+2016-03-10 13:04:44 +0000 UTC
+#14750 cyberphon encoding/json: parser ignores the case of member names
+2016-03-14 05:01:01 +0000 UTC
+#14811 hvnsweeti cmd/go: go test -cover failed to import, without -cover
+★★1か月未満のIssues★★
+2015-08-03 19:14:17 +0000 UTC
+#12001 lukescott encoding/json: Marshaler/Unmarshaler not stream friendl
