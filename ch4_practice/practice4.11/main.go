@@ -19,7 +19,14 @@ import (
 // 第一引数は -○○ で実行条件を指定.
 // 第二引数以降は ○○:要素　で条件を指定する.
 
+// Issue作成
 // -create title:test body:this is test repos:kentarotak/Go_Practice token:○○
+// Issue更新
+// -edit title:test body:this is test repos:kentarotak/Go_Practice number:8 token:○○
+// Issueクローズ
+// -edit title:test body:this is test repos:kentarotak/Go_Practice number:8 status:close token:○○
+// 読みだし
+// -search repo:kentarotak/Go_Practice
 
 //!+
 func main() {
@@ -49,6 +56,14 @@ func main() {
 		// 作成、更新、クローズの実施.
 		if cmd[0] == "-create" {
 			createIssue(parsedata)
+		}
+
+		if cmd[0] == "-edit" {
+			editIssue(parsedata)
+		}
+
+		if cmd[0] == "-lock" {
+			lockIssue(parsedata)
 		}
 	}
 
@@ -154,6 +169,112 @@ func createIssue(parsedata map[string]string) {
 
 	client := &http.Client{Timeout: time.Duration(15 * time.Second)}
 	resp, err := client.Do(req)
+
+	fmt.Printf("status = %d\n", resp.Status)
+	defer resp.Body.Close()
+
+}
+
+type EditIssue struct {
+	Title string `json:"title"`
+	Body  string `json:"body"`
+	State string `json:"state"`
+}
+
+func editIssue(parsedata map[string]string) {
+
+	_, ok := parsedata["title"]
+	if ok != true {
+		fmt.Printf("titleを設定してください\n")
+		return
+	}
+	_, ok = parsedata["body"]
+	if ok != true {
+		fmt.Printf("bodyを設定してください\n")
+		return
+	}
+	_, ok = parsedata["repos"]
+	if ok != true {
+		fmt.Printf("reposを設定してください\n")
+		return
+	}
+
+	_, ok = parsedata["state"]
+	if ok != true {
+		// 指定がない場合はopen
+		parsedata["state"] = "open"
+	}
+
+	_, ok = parsedata["token"]
+	if ok != true {
+		fmt.Printf("tokenを設定してください\n")
+		return
+	}
+	_, ok = parsedata["number"]
+	if ok != true {
+		fmt.Printf("numberを設定してください\n")
+		return
+	}
+
+	var issue = EditIssue{Title: parsedata["title"], Body: parsedata["body"], State: parsedata["state"]}
+
+	data, err := json.Marshal(issue)
+	if err != nil {
+		log.Fatalf("JSON marshaling Failed %s\n", err)
+	}
+
+	url := "https://api.github.com/repos/"
+	url += parsedata["repos"] + "/issues/" + parsedata["number"]
+
+	req, _ := http.NewRequest(
+		"PATCH",
+		url,
+		bytes.NewBuffer(data),
+	)
+
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "token "+parsedata["token"])
+
+	client := &http.Client{Timeout: time.Duration(15 * time.Second)}
+	resp, err := client.Do(req)
+
+	fmt.Printf("status = %d\n", resp.Status)
+	defer resp.Body.Close()
+
+}
+
+func lockIssue(parsedata map[string]string) {
+
+	_, ok := parsedata["repos"]
+	if ok != true {
+		fmt.Printf("reposを設定してください\n")
+		return
+	}
+	_, ok = parsedata["token"]
+	if ok != true {
+		fmt.Printf("tokenを設定してください\n")
+		return
+	}
+	_, ok = parsedata["number"]
+	if ok != true {
+		fmt.Printf("numberを設定してください\n")
+		return
+	}
+
+	url := "https://api.github.com/repos/"
+	url += parsedata["repos"] + "/issues/" + parsedata["number"] + "/lock"
+
+	req, _ := http.NewRequest(
+		"PUT",
+		url,
+		nil,
+	)
+
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "token "+parsedata["token"])
+
+	client := &http.Client{Timeout: time.Duration(15 * time.Second)}
+	resp, _ := client.Do(req)
 
 	fmt.Printf("status = %d\n", resp.Status)
 	defer resp.Body.Close()
