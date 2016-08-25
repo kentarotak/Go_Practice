@@ -53,10 +53,10 @@ func main() {
 			}
 			objs = append(objs, result)
 		}
-	}
 
-	// listの更新
-	saveIndex(objs)
+		// listの更新
+		saveIndex(objs)
+	}
 
 	// 検索されたワードをもとにURLと内容を表示する.
 	searchInfo(cmd, objs)
