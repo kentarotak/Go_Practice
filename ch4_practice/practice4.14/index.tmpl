@@ -1,0 +1,41 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>githubテスト</title>
+</head>
+<body>
+
+<h1> リポジトリとラベルを指定してください </h1>
+<h3>リポジトリ</h3>
+<input type="text" id="repoInput" value="" />
+<h3>ラベル</h3>
+<input type="text" id="labelInput" value="" />
+<input type="button" value="実行" onclick="location.href=AddStringToTextarea()"/><br />
+
+</body>
+
+<script>
+function AddStringToTextarea() {
+   var UserrepositoryString = document.getElementById('repoInput').value;
+   var UserlavelString = document.getElementById('labelInput').value;
+
+    if(UserlavelString != "") {
+        UserlavelString = "+label:" + UserlavelString
+    }
+
+
+   var url = "http://localhost:8000/?q=repo:" + UserrepositoryString + UserlavelString
+   console.log(url)
+   return url
+}
+
+</script>
+
+</html>
+{{end}}
