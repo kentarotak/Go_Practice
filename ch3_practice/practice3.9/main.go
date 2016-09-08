@@ -15,6 +15,9 @@ import (
 	"net/http"
 	"log"
 	"io"
+	"net/url"
+	"strconv"
+	"fmt"
 )
 
 func main() {
@@ -33,16 +36,48 @@ func main() {
 
 func display(out io.Writer,prm map[string][]string) {
 
+	a	:= 0
+	b	:= 0
 
-	xmin, ymin, xmax, ymax := -2, -2, +2, +2
+	var scale float64
+	scale = 100
+
+
+	if prm["x"] != nil {
+		a, _ = strconv.Atoi(prm["x"][0])
+	}
+	if prm["y"] != nil {
+		b, _ = strconv.Atoi(prm["y"][0])
+	}
+	if prm["scale"] != nil {
+		temp, _ := strconv.Atoi(prm["scale"][0])
+		scale = float64(temp)/100
+		scale = (4/scale)/2
+	}
+
+	fmt.Printf("scale %f\n",scale)
+
+	var xmin,ymin,xmax,ymax float64
+
+	xmin = -float64(scale) + float64(a)
+	ymin = -float64(scale) + float64(b)
+	xmax = float64(scale)  +  float64(a)
+	ymax = float64(scale)  +  float64(b)
+
+	/*
+	xmin =  xmin/float64(scale)
+	ymin =  ymin/float64(scale)
+	xmax =  xmax/float64(scale)
+	ymax =  ymax/float64(scale)
+	*/
+
 	width, height          := 1024, 1024
-
 
 	img := image.NewRGBA(image.Rect(0, 0, width, height))
 	for py := 0; py < height; py++ {
-		y := float64(py)/height*(ymax-ymin) + ymin
+		y := float64(py)/float64(height)*(ymax-ymin) + ymin
 		for px := 0; px < width; px++ {
-			x := float64(px)/width*(xmax-xmin) + xmin
+			x := float64(px)/float64(width)*(xmax-xmin) + xmin
 			z := complex(x, y)
 			// Image point (px, py) represents complex value z.
 			img.Set(px, py, mandelbrot(z))
