@@ -26,7 +26,6 @@ func main() {
 // 題意は満たせてないかも...
 func reverse(s []byte) {
 
-	// runeにキャスト.
 	tmp := []rune(string(s))
 	for i, j := 0, len(tmp)-1; i < j; i, j = i+1, j-1 {
 		tmp[i], tmp[j] = tmp[j], tmp[i]
