@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"regexp"
 
 	"golang.org/x/net/html"
 )
@@ -31,16 +32,12 @@ func main() {
 }
 
 func visit(links []string, n *html.Node) []string {
-
-	//for _, a := range n.Attr {
-	//	fmt.Println(a.Key)
-	//	fmt.Println(a.Val)
-	//	fmt.Println(a.Namespace)
-	//}
+	//fmt.Printf("%#v\n", n)
 	if n.Type == html.TextNode {
-		fmt.Println(n.Data)
+		if regexp.MustCompile(`.*\n|.*\t`).Match([]byte(n.Data)) == false {
+			fmt.Println(n.Data)
+		}
 	}
-	//fmt.Println(n.Namespace)
 
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		links = visit(links, c)
@@ -48,4 +45,8 @@ func visit(links []string, n *html.Node) []string {
 
 	return links
 
+}
+
+func check_regexp(reg, str string) {
+	fmt.Println(regexp.MustCompile(reg).Match([]byte(str)))
 }
