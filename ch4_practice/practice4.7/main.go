@@ -23,37 +23,22 @@ func main() {
 }
 
 //!+rev
-// 題意は満たせてないかも...
 func reverse(s []byte) {
 
-	tmp := []rune(string(s))
-	for i, j := 0, len(tmp)-1; i < j; i, j = i+1, j-1 {
-		tmp[i], tmp[j] = tmp[j], tmp[i]
+	for i := 0; i < len(s); {
+		_, size := utf8.DecodeRune(s[i:])
+		reverse2(s[i : i+size])
+		i += size
 	}
 
-	tmp2 := []byte(string(tmp))
-
-	fmt.Printf("%s\n", string(tmp))
-
-	for i := 0; i < len(tmp2); i++ {
-		s[i] = tmp2[i]
-	}
-	//s = []byte(string(tmp))
-
-	fmt.Printf("%s\n", string(s))
+	reverse2(s[:])
 
 }
 
 func reverse2(s []byte) {
-
-	for i, j := 0, len(s)-1; i < j; {
-		_, size := utf8.DecodeRuneInString(string(s[i:]))
-		fmt.Printf("%d\n", size)
-
-		i += size
-		j -= size
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
 	}
-
 }
 
 //!-rev
