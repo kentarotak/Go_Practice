@@ -1,6 +1,9 @@
 // Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+// See page 133.
+
+// Outline prints the outline of an HTML document tree.
 package main
 
 import (
@@ -12,62 +15,74 @@ import (
 )
 
 func main() {
-	if len(os.Args[1:]) <= 2 {
-		resp, err := http.Get(os.Args[1])
-		if err != nil {
-			os.Exit(1)
-		}
-		defer resp.Body.Close()
-		doc, err := html.Parse(resp.Body)
-		if err != nil {
-			os.Exit(1)
-		}
-		result := ElementById(doc, os.Args[2])
 
-		fmt.Printf("%#v\n", result)
-	} else {
-		fmt.Printf("Too few Argments\n")
+	outline(os.Args[1:])
+
+}
+
+func outline(arg []string) error {
+	resp, err := http.Get(arg[0])
+	if err != nil {
+		return err
 	}
+	defer resp.Body.Close()
+
+	doc, err := html.Parse(resp.Body)
+	if err != nil {
+		return err
+	}
+
+	//!+call
+	result := ElementByID(doc, arg[1])
+	fmt.Printf("result = %v", result)
+	//!-call
+
+	return nil
 }
 
-func ElementById(doc *html.Node, id string) *html.Node {
-	result := forEachNode(doc, id, isElementById, nil)
+func ElementByID(doc *html.Node, id string) *html.Node {
+	var ret *html.Node
 
-	return result
+	search := func(n *html.Node) bool {
+		if n.Type == html.ElementNode {
+			for _, a := range n.Attr {
+				if a.Key == "id" && a.Val == id {
+					ret = n // ここで共有する.
+					return false
+				}
+			}
+		}
+		return true
+	}
+
+	forEachNode(doc, search, nil)
+
+	return ret
 }
 
-var isSearchEnd = true
-
-func forEachNode(n *html.Node, id string, pre, post func(n *html.Node, id string) bool) *html.Node {
-
+//!+forEachNode
+// forEachNode calls the functions pre(x) and post(x) for each node
+// x in the tree rooted at n. Both functions are optional.
+// pre is called before the children are visited (preorder) and
+// post is called after (postorder).
+func forEachNode(n *html.Node, pre, post func(n *html.Node) bool) {
 	if pre != nil {
-		isSearchEnd = pre(n, id)
-		if isSearchEnd == true {
-			return n
+		iscontinue := pre(n)
+		if iscontinue == false {
+			return
 		}
 	}
-	var result *html.Node
-	for c := n.FirstChild; c != nil && isSearchEnd == false; c = c.NextSibling {
-		result = forEachNode(c, id, pre, post)
+
+	for c := n.FirstChild; c != nil; c = c.NextSibling {
+		forEachNode(c, pre, post)
 	}
 
 	if post != nil {
-		post(n, id)
+		iscontinue := post(n)
+		if iscontinue == false {
+			return
+		}
 	}
-
-	return result
 }
 
 //!-forEachNode
-
-func isElementById(n *html.Node, id string) bool {
-
-	if n.Type == html.ElementNode {
-		for _, a := range n.Attr {
-			if a.Key == "id" && a.Val == id {
-				return true
-			}
-		}
-	}
-	return false
-}
