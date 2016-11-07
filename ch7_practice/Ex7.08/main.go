@@ -84,6 +84,12 @@ func (x byLength) Swap(i, j int)      { x[i], x[j] = x[j], x[i] }
 
 //!-yearcode
 
+type byAlbum []*Track
+
+func (x byAlbum) Len() int           { return len(x) }
+func (x byAlbum) Less(i, j int) bool { return x[i].Album < x[j].Album }
+func (x byAlbum) Swap(i, j int)      { x[i], x[j] = x[j], x[i] }
+
 func main() {
 	/*
 		fmt.Println("byArtist:")
@@ -181,10 +187,10 @@ func StableSortByMyself(data sort.Interface) {
 	// バブルソート??
 	length := data.Len()
 
-	for i := 0; i < length; i++ {
-		for j := 0; j < length-i; j++ {
-			if data.Less(i, j) {
-				data.Swap(i, j)
+	for i := 0; i < length-1; i++ {
+		for j := length - 1; j > i; j-- {
+			if data.Less(j, j-1) {
+				data.Swap(j, j-1)
 			}
 		}
 	}
