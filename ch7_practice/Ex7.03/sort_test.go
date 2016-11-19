@@ -4,6 +4,7 @@
 package treesort
 
 import (
+	"fmt"
 	"math/rand"
 	"testing"
 )
@@ -15,6 +16,6 @@ func TestSort(t *testing.T) {
 	}
 	Sort(data)
 
-	root.String()
+	fmt.Println(String())
 
 }

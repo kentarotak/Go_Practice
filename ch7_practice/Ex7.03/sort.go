@@ -6,7 +6,10 @@
 // Package treesort provides insertion sort using an unbalanced binary tree.
 package treesort
 
-import "fmt"
+import (
+	"bytes"
+	"fmt"
+)
 
 //!+
 type tree struct {
@@ -14,23 +17,26 @@ type tree struct {
 	left, right *tree
 }
 
-func (t *tree) String() {
+func String() string {
+
+	var buf bytes.Buffer
 
 	if root != nil {
-		display(root)
+		display(&buf, root)
 	}
+	return buf.String()
 
 }
 
-func display(t *tree) {
+func display(buf *bytes.Buffer, t *tree) {
 
-	fmt.Printf("%d \t", t.value)
+	fmt.Fprintf(buf, "%d \t", t.value)
 	if t.left != nil {
-		display(t.left)
+		display(buf, t.left)
 	}
 
 	if t.right != nil {
-		display(t.right)
+		display(buf, t.right)
 	}
 
 }
