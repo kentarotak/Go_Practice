@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>電卓??</title>
+</head>
+<body>
+
+<h1> 入力された式 </h1>
+<h3> {{.Function}}
+
+<h1> 変数の値を指定してください </h1>
+
+{{range .Variable}}
+<h3> {{.}}
+<input type="text" id="{{.}}" value="" />
+{{end}}
+
+<input type="button" value="実行" onclick="location.href=AddStringToTextarea()"/><br />
+
+</body>
+
+<script>
+function AddStringToTextarea() {
+   var url = ""
+   {{range .Variable}}
+   url =  url + "," + document.getElementById('{{.}}').value;
+   {{end}}
+   url = "http://localhost:8000/result?item=" + url
+   console.log(url)
+   return url
+}
+
+</script>
+
+</html>
