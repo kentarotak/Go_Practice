@@ -12,13 +12,16 @@ import (
 	"log"
 	"net"
 	"os"
+	"strings"
 	"time"
 )
 
 func handleConn(c net.Conn) {
 	defer c.Close()
 	for {
-		_, err := io.WriteString(c, time.Now().Format("15:04:05\n"))
+		str := time.Now().Format("15:04:05\n")
+		str = strings.Trim(str, "\n")
+		_, err := io.WriteString(c, str)
 		if err != nil {
 			return // e.g., client disconnected
 		}
