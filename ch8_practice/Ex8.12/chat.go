@@ -22,7 +22,7 @@ var (
 	leaving  = make(chan client)
 	messages = make(chan string) // all incoming client messages
 	addnames = make(chan string)
-	mvnames  = make(chan string)
+	rmnames  = make(chan string)
 )
 
 func broadcaster() {
@@ -50,7 +50,7 @@ func broadcaster() {
 			close(cli)
 		case name := <-addnames:
 			username = append(username, name)
-		case name := <-mvnames:
+		case name := <-rmnames:
 			remove(username, name)
 		}
 	}
@@ -79,7 +79,7 @@ func handleConn(conn net.Conn) {
 	leaving <- ch
 	messages <- who + " has left"
 	//名前を削除.
-	mvnames <- who
+	rmnames <- who
 	conn.Close()
 }
 
