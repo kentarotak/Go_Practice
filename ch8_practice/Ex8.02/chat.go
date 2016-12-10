@@ -54,7 +54,7 @@ func broadcaster() {
 		case name := <-addnames:
 			username = append(username, name)
 		case name := <-rmnames:
-			username = remove(username, name)
+			remove(username, name)
 		}
 	}
 }
@@ -117,7 +117,7 @@ func clientWriter(conn net.Conn, ch <-chan string) {
 
 //!+main
 func main() {
-	listener, err := net.Listen("tcp", "localhost:8000")
+	listener, err := net.Listen("tcp", "localhost:21")
 	if err != nil {
 		log.Fatal(err)
 	}

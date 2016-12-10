@@ -51,7 +51,7 @@ func broadcaster() {
 		case name := <-addnames:
 			username = append(username, name)
 		case name := <-rmnames:
-			remove(username, name)
+			username = remove(username, name)
 		}
 	}
 }

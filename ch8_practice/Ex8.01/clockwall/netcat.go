@@ -8,21 +8,21 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
 	"io"
 	"log"
 	"net"
 	"os"
 	"strings"
+	"time"
 )
 
 func main() {
-	var buf []*bytes.Buffer
+	var buf []*net.Conn
 	var area []string
 	for _, data := range os.Args[1:] {
 		area_tmp, port := parseArg(data)
-		tmp := new(bytes.Buffer)
+		var tmp *net.Conn
 		go connect(port, tmp)
 		area = append(area, area_tmp)
 		buf = append(buf, tmp)
@@ -31,7 +31,8 @@ func main() {
 
 	fmt.Fprintf(os.Stdout, "%s \t %s\n", area[0], area[1])
 	for {
-		fmt.Fprintf(os.Stdout, "\r%s \t %s", buf[0], buf[1])
+		time.Sleep(2 * time.Second)
+		io.Copy(os.Stdout, *(buf[0]))
 	}
 
 }
@@ -49,7 +50,7 @@ func parseArg(in string) (area string, port string) {
 	return area, port
 }
 
-func connect(port string, write io.Writer) {
+func connect(port string, buf *net.Conn) {
 	conn, err := net.Dial("tcp", port)
 
 	if err != nil {
@@ -57,7 +58,8 @@ func connect(port string, write io.Writer) {
 	}
 	defer conn.Close()
 
-	mustCopy(write, conn)
+	buf = &conn
+	//mustCopy(write, conn)
 }
 
 func mustCopy(dst io.Writer, src io.Reader) {

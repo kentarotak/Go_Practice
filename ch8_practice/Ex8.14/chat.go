@@ -64,11 +64,24 @@ func broadcaster() {
 //!+handleConn
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages
+
+	go func() {
+		fmt.Fprintln(conn, "名前を入力してください\n")
+	}()
+
+	input := bufio.NewScanner(conn)
+
+	var who string
+
+	if input.Scan() {
+		who = input.Text()
+	}
+
 	go clientWriter(conn, ch)
 
-	who := conn.RemoteAddr().String()
 	ch <- "You are " + who
 	messages <- who + " has arrived"
+
 	entering <- ch
 	// 名前を追加.
 	addnames <- who
@@ -93,7 +106,6 @@ func handleConn(conn net.Conn) {
 		}
 	}()
 
-	input := bufio.NewScanner(conn)
 	for input.Scan() {
 		messages <- who + ": " + input.Text()
 		rcvmessage <- struct{}{}
@@ -138,6 +150,7 @@ func remove(numbers []string, search string) []string {
 	for _, num := range numbers {
 		if num != search {
 			result = append(result, num)
+			fmt.Printf("%s\n", num)
 		}
 	}
 	return result
