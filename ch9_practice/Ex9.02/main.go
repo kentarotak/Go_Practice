@@ -14,6 +14,8 @@ import (
 	"sync"
 )
 
+var once sync.Once
+
 // pc[i] is the population count of i.
 var pc [256]byte
 
@@ -25,8 +27,6 @@ func loadCounter() {
 
 // PopCount returns the population count (number of set bits) of x.
 func PopCount(x uint64) int {
-
-	var once sync.Once
 	once.Do(func() { loadCounter() })
 
 	return int(pc[byte(x>>(0*8))] +
