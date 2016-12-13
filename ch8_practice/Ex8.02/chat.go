@@ -12,6 +12,9 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"os"
+	"os/exec"
+	"strconv"
 	"strings"
 )
 
@@ -32,6 +35,7 @@ var (
 
 var clients = make(map[client]bool) // all connected clients
 var clientsConnection = make(map[client]net.Conn)
+var rootpath = make(map[client]string)
 
 func cmdHandler() {
 
@@ -39,6 +43,7 @@ func cmdHandler() {
 		select {
 		case cli := <-entering:
 			clients[cli] = true
+			rootpath[cli], _ = os.Getwd() //接続時のディレクトリを仮想rootpathにする.
 			cli <- "220 FTP server Ready\n"
 		case cli := <-leaving:
 			delete(clients, cli)
@@ -53,17 +58,62 @@ func interPretationCmd(ch chan<- string, cmd string) {
 
 	data := strings.Split(cmd, " ")
 
-	//fmt.Printf("%s %s\n", data[0], data[1])
+	fmt.Printf("%s\n", data[0])
 
 	switch data[0] {
 	case "USER":
-		ch <- "331 User name okay, need password"
+		string := fmt.Sprintf("331 Password required for %s", data[1])
+		ch <- string
 	case "PASS":
 		ch <- "230 User logged in, proceed"
 	case "PORT":
 		// 相手先のIPアドレスとポート番号を用いて、コネクションを張る.
-		//conn, err := net.Dial("tcp", "localhost:8000")
+		fmt.Printf("%s\n", data[1])
+		prs := strings.Split(data[1], ",")
+
+		stringIp := fmt.Sprintf("%s.%s.%s.%s", prs[0], prs[1], prs[2], prs[3])
+
+		highbyte, _ := strconv.Atoi(prs[4])
+		lowbyte, _ := strconv.Atoi(prs[5])
+
+		portnum := highbyte*256 + lowbyte
+
+		addr := fmt.Sprintf("%s:%d", stringIp, portnum)
+		fmt.Printf("%s\n", addr)
+		conn, err := net.Dial("tcp", addr)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		clientsConnection[ch] = conn
+
 		ch <- "200 PORT command successful"
+	case "NLST":
+		ch <- "150 File status okay; about to open data connection."
+
+		// 外部コマンドを使用する.
+		out, _ := exec.Command("ls").CombinedOutput()
+
+		// 別コネクションを用いて、フォルダ情報を送信.
+		fmt.Fprintln(clientsConnection[ch], string(out))
+
+		ch <- "226 Closing data connection."
+		clientsConnection[ch].Close()
+	case "SYST":
+		ch <- "215 Windows\n"
+	case "FEAT":
+		ch <- "211 "
+	case "XPWD":
+		pwd, _ := os.Getwd()
+		pwd = strings.TrimPrefix(pwd, rootpath[ch])
+		string := fmt.Sprintf("257 \"/%s\" is current directory.", pwd)
+		ch <- string
+	case "TYPE A":
+		ch <- "200 TYPE SET TO A"
+	case "CWD":
+		ch <- "250 CWD command successful."
+	default:
+		ch <- "504 Command not implemented for that parameter."
 	}
 
 }
