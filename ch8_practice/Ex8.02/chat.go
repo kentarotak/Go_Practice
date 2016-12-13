@@ -30,12 +30,15 @@ var (
 
 )
 
+var clients = make(map[client]bool) // all connected clients
+var clientsConnection = make(map[client]net.Conn)
+
 func cmdHandler() {
-	clients := make(map[client]bool) // all connected clients
 
 	for {
 		select {
 		case cli := <-entering:
+			clients[cli] = true
 			cli <- "220 FTP server Ready\n"
 		case cli := <-leaving:
 			delete(clients, cli)
