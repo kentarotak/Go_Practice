@@ -12,98 +12,80 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"time"
+	"strings"
 )
 
 //!+broadcaster
 type client chan<- string // an outgoing message channel
 
+type cmdSet struct {
+	cmd string
+	ch  chan string
+}
+
 var (
-	entering   = make(chan client)
-	leaving    = make(chan client)
-	messages   = make(chan string) // all incoming client messages
-	addnames   = make(chan string)
-	rmnames    = make(chan string)
-	rcvmessage = make(chan struct{})
+	entering = make(chan client)
+	leaving  = make(chan client)
+	messages = make(chan cmdSet) // all incoming client messages
+
 )
 
-func broadcaster() {
+func cmdHandler() {
 	clients := make(map[client]bool) // all connected clients
 
-	var username []string
 	for {
 		select {
-		case msg := <-messages:
-			// Broadcast incoming message to all
-			// clients' outgoing message channels.
-			for cli := range clients {
-				cli <- msg
-			}
-
 		case cli := <-entering:
-			clients[cli] = true
-			// 今存在するユーザーの表示.
-			cli <- "\n現在以下のユーザがいます\n"
-			for _, name := range username {
-				cli <- name
-			}
-
+			cli <- "220 FTP server Ready\n"
 		case cli := <-leaving:
 			delete(clients, cli)
 			close(cli)
-		case name := <-addnames:
-			username = append(username, name)
-		case name := <-rmnames:
-			remove(username, name)
+		case msg := <-messages:
+			interPretationCmd(msg.ch, msg.cmd)
 		}
 	}
 }
 
-//!-broadcaster
+func interPretationCmd(ch chan<- string, cmd string) {
+
+	data := strings.Split(cmd, " ")
+
+	//fmt.Printf("%s %s\n", data[0], data[1])
+
+	switch data[0] {
+	case "USER":
+		ch <- "331 User name okay, need password"
+	case "PASS":
+		ch <- "230 User logged in, proceed"
+	case "PORT":
+		// 相手先のIPアドレスとポート番号を用いて、コネクションを張る.
+		//conn, err := net.Dial("tcp", "localhost:8000")
+		ch <- "200 PORT command successful"
+	}
+
+}
 
 //!+handleConn
 func handleConn(conn net.Conn) {
 	ch := make(chan string) // outgoing client messages
 	go clientWriter(conn, ch)
 
-	who := conn.RemoteAddr().String()
-	ch <- "You are " + who
-	messages <- who + " has arrived"
 	entering <- ch
-	// 名前を追加.
-	addnames <- who
-
-	go func() {
-		ticker := time.NewTicker(300 * time.Second)
-		flag := false
-		for {
-			select {
-			case <-ticker.C:
-				fmt.Printf("時間\n")
-				if flag == false {
-					fmt.Printf("close\n")
-					conn.Close()
-					ticker.Stop()
-				}
-				flag = false
-			case <-rcvmessage:
-				fmt.Printf("message受信\n")
-				flag = true
-			}
-		}
-	}()
 
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
-		messages <- who + ": " + input.Text()
-		rcvmessage <- struct{}{}
+		cmd := input.Text()
+		fmt.Printf("コマンド: %s\n", cmd)
+
+		var val cmdSet
+
+		val.cmd = cmd
+		val.ch = ch
+		messages <- val
 	}
 	// NOTE: ignoring potential errors from input.Err()
 
 	leaving <- ch
-	messages <- who + " has left"
-	//名前を削除.
-	rmnames <- who
 	conn.Close()
 }
 
@@ -122,7 +104,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	go broadcaster()
+	go cmdHandler()
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
@@ -132,15 +114,3 @@ func main() {
 		go handleConn(conn)
 	}
 }
-
-func remove(numbers []string, search string) []string {
-	result := []string{}
-	for _, num := range numbers {
-		if num != search {
-			result = append(result, num)
-		}
-	}
-	return result
-}
-
-//!-main
