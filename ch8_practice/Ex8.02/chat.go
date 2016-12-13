@@ -98,7 +98,24 @@ func interPretationCmd(ch chan<- string, cmd string) {
 		fmt.Fprintln(clientsConnection[ch], string(out))
 
 		ch <- "226 Closing data connection."
+
+		// 回線をクローズして、マップから削除.
 		clientsConnection[ch].Close()
+		delete(clientsConnection, ch)
+	case "LIST":
+		ch <- "150 File status okay; about to open data connection."
+
+		// 外部コマンドを使用する.
+		out, _ := exec.Command("ls", "-al").CombinedOutput()
+
+		// 別コネクションを用いて、フォルダ情報を送信.
+		fmt.Fprintln(clientsConnection[ch], string(out))
+
+		ch <- "226 Closing data connection."
+
+		// 回線をクローズして、マップから削除.
+		clientsConnection[ch].Close()
+		delete(clientsConnection, ch)
 	case "SYST":
 		ch <- "215 Windows\n"
 	case "FEAT":
