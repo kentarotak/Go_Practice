@@ -1,10 +1,6 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+// Windows 標準FTP用クライアント.
+// pwd, ls, get, put bye　に対応
 
-// See page 254.
-//!+
-
-// Chat is a server that lets clients chat with each other.
 package main
 
 import (
@@ -46,6 +42,7 @@ func cmdHandler() {
 			rootpath[cli], _ = os.Getwd() //接続時のディレクトリを仮想rootpathにする.
 			cli <- "220 FTP server Ready\n"
 		case cli := <-leaving:
+			fmt.Printf("回線クローズ\n")
 			delete(clients, cli)
 			close(cli)
 		case msg := <-messages:
@@ -175,6 +172,32 @@ func interPretationCmd(ch chan<- string, cmd string) {
 
 		}
 		ch <- "226 Closing data connection."
+	case "STOR":
+		ch <- "150 File status okay; about to open data connection."
+		// 回線をクローズして、マップから削除.
+		defer clientsConnection[ch].Close()
+		defer delete(clientsConnection, ch)
+
+		output, err := os.Create(data[1])
+
+		if err != nil {
+			ch <- "550 CMD ERROR"
+			break
+		}
+
+		buff := make([]byte, 256)
+
+		for {
+			c, _ := clientsConnection[ch].Read(buff)
+			if c == 0 {
+				break
+			}
+			output.Write(buff[:c])
+		}
+		output.Close()
+		ch <- "226 Closing data connection."
+	case "QUIT":
+		ch <- "221 Good bye."
 	default:
 		ch <- "504 Command not implemented for that parameter."
 	}
@@ -192,6 +215,10 @@ func handleConn(conn net.Conn) {
 	for input.Scan() {
 		cmd := input.Text()
 		fmt.Printf("コマンド: %s\n", cmd)
+
+		if strings.HasPrefix(cmd, "QUIT") {
+			break
+		}
 
 		var val cmdSet
 
