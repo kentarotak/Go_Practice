@@ -91,6 +91,10 @@ func interPretationCmd(ch chan<- string, cmd string) {
 	case "NLST":
 		ch <- "150 File status okay; about to open data connection."
 
+		// 回線をクローズして、マップから削除.
+		defer clientsConnection[ch].Close()
+		defer delete(clientsConnection, ch)
+
 		// 外部コマンドを使用する.
 		out, _ := exec.Command("ls").CombinedOutput()
 
@@ -99,11 +103,12 @@ func interPretationCmd(ch chan<- string, cmd string) {
 
 		ch <- "226 Closing data connection."
 
-		// 回線をクローズして、マップから削除.
-		clientsConnection[ch].Close()
-		delete(clientsConnection, ch)
 	case "LIST":
 		ch <- "150 File status okay; about to open data connection."
+
+		// 回線をクローズして、マップから削除.
+		defer clientsConnection[ch].Close()
+		defer delete(clientsConnection, ch)
 
 		// 外部コマンドを使用する.
 		out, _ := exec.Command("ls", "-al").CombinedOutput()
@@ -113,9 +118,6 @@ func interPretationCmd(ch chan<- string, cmd string) {
 
 		ch <- "226 Closing data connection."
 
-		// 回線をクローズして、マップから削除.
-		clientsConnection[ch].Close()
-		delete(clientsConnection, ch)
 	case "SYST":
 		ch <- "215 Windows\n"
 	case "FEAT":
@@ -128,7 +130,51 @@ func interPretationCmd(ch chan<- string, cmd string) {
 	case "TYPE A":
 		ch <- "200 TYPE SET TO A"
 	case "CWD":
-		ch <- "250 CWD command successful."
+		// 仮想rootpathなので、フルパスは無しで.
+		// .. は仮想rootpathに変更
+		var path string
+		if strings.HasPrefix(data[1], "..") {
+			path = strings.Replace(data[1], "..", rootpath[ch], 1)
+		} else {
+			pwd, _ := os.Getwd()
+			path = pwd + "/" + data[1]
+		}
+		fmt.Printf("コマンド: %s\n", path)
+		err := os.Chdir(path)
+
+		if err != nil {
+			ch <- "550 CMD ERROR"
+		} else {
+			ch <- "250 CWD command successful."
+		}
+	case "RETR":
+		ch <- "150 File status okay; about to open data connection."
+
+		// 回線をクローズして、マップから削除.
+		defer clientsConnection[ch].Close()
+		defer delete(clientsConnection, ch)
+
+		file, err := os.Open(data[1])
+		if err != nil {
+			ch <- "550 CMD ERROR"
+		}
+		defer file.Close()
+
+		buf := make([]byte, 1024)
+		for {
+			n, err := file.Read(buf)
+			if n == 0 {
+				break
+			}
+
+			if err != nil {
+				ch <- "550 CMD ERROR"
+				break
+			}
+			fmt.Fprintln(clientsConnection[ch], string(buf[:n]))
+
+		}
+		ch <- "226 Closing data connection."
 	default:
 		ch <- "504 Command not implemented for that parameter."
 	}
