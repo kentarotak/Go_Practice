@@ -8,12 +8,14 @@
 package main
 
 import (
+	"fmt"
 	"image"
 	"image/color"
 	"image/png"
 	"math/cmplx"
 	"os"
 	"sync"
+	"time"
 )
 
 type SetImgVal struct {
@@ -29,11 +31,12 @@ const (
 
 var wg sync.WaitGroup
 
+var img = image.NewRGBA(image.Rect(0, 0, width, height))
+
 func main() {
 
-	ch := make(chan SetImgVal, 1)
-
-	img := image.NewRGBA(image.Rect(0, 0, width, height))
+	start := time.Now()
+	ch := make(chan struct{})
 
 	for py := 0; py < height; py++ {
 		y := float64(py)/height*(ymax-ymin) + ymin
@@ -50,23 +53,25 @@ func main() {
 		close(ch)
 	}()
 
-	for result := range ch {
-		img.Set(result.px, result.py, result.color)
-	}
-
 	png.Encode(os.Stdout, img) // NOTE: ignoring errors
+
+	fmt.Fprintf(os.Stderr, "経過時間 %s", time.Since(start))
 }
 
-func calPallarel(px int, py int, y float64, ch chan<- SetImgVal) {
+func calPallarel(px int, py int, y float64, ch chan<- struct{}) {
 	defer wg.Done()
-	var val SetImgVal
 	x := float64(px)/width*(xmax-xmin) + xmin
 	z := complex(x, y)
 
-	val.px = px
-	val.py = py
-	val.color = mandelbrot(z)
-	ch <- val
+	//fmt.Fprintf(os.Stderr, "px: %d", px)
+
+	img.Set(px, py, mandelbrot(z))
+	/*
+		val.px = px
+		val.py = py
+		val.color = mandelbrot(z)
+		ch <- val
+	*/
 }
 
 func mandelbrot(z complex128) color.Color {
