@@ -24,7 +24,7 @@ type SetImgVal struct {
 
 const (
 	xmin, ymin, xmax, ymax = -2, -2, +2, +2
-	width, height          = 600, 600
+	width, height          = 1024, 1024
 )
 
 var wg sync.WaitGroup
