@@ -8,8 +8,8 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"io"
 	"log"
 	"net"
 	"os"
@@ -17,22 +17,24 @@ import (
 	"time"
 )
 
-func main() {
-	var buf []*net.Conn
-	var area []string
-	for _, data := range os.Args[1:] {
-		area_tmp, port := parseArg(data)
-		var tmp *net.Conn
-		go connect(port, tmp)
-		area = append(area, area_tmp)
-		buf = append(buf, tmp)
+var timedata = make(map[string]string)
 
+func main() {
+
+	for _, data := range os.Args[1:] {
+		area, port := parseArg(data)
+		go connect(area, port)
 	}
 
-	fmt.Fprintf(os.Stdout, "%s \t %s\n", area[0], area[1])
 	for {
 		time.Sleep(2 * time.Second)
-		io.Copy(os.Stdout, *(buf[0]))
+		var showstr string
+		for area, time := range timedata {
+			showstr += fmt.Sprintf("::Area %s: Time %s ::", area, time)
+		}
+
+		fmt.Printf("\r %s", showstr)
+
 	}
 
 }
@@ -50,21 +52,21 @@ func parseArg(in string) (area string, port string) {
 	return area, port
 }
 
-func connect(port string, buf *net.Conn) {
+func connect(area string, port string) {
 	conn, err := net.Dial("tcp", port)
+	timedata[area] = ""
 
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer conn.Close()
 
-	buf = &conn
-	//mustCopy(write, conn)
-}
+	fmt.Printf("接続!\n")
 
-func mustCopy(dst io.Writer, src io.Reader) {
-	if _, err := io.Copy(dst, src); err != nil {
-		log.Fatal(err)
+	input := bufio.NewScanner(conn)
+	for input.Scan() {
+		cmd := input.Text()
+		timedata[area] = cmd
 	}
 }
 

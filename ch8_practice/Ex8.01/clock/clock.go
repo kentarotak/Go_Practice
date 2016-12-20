@@ -8,7 +8,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"log"
 	"net"
 	"os"
@@ -21,10 +20,13 @@ func handleConn(c net.Conn) {
 	for {
 		str := time.Now().Format("15:04:05\n")
 		str = strings.Trim(str, "\n")
-		_, err := io.WriteString(c, str)
-		if err != nil {
-			return // e.g., client disconnected
-		}
+		fmt.Fprintln(c, str)
+		//_, err := io.WriteString(c, str)
+		/*
+			if err != nil {
+				return // e.g., client disconnected
+			}
+		*/
 		time.Sleep(1 * time.Second)
 	}
 }
