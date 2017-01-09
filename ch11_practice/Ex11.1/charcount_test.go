@@ -37,6 +37,12 @@ func TestCharcount(t *testing.T) {
 			[5]int{0, 1, 0, 1, 0},
 			0,
 		},
+		// 3バイト文字.
+		{"𡚴\n",
+			map[string]int{"𡚴": 1, "\n": 1},
+			[5]int{0, 1, 0, 0, 1},
+			0,
+		},
 	}
 
 	for _, test := range tests {
