@@ -40,7 +40,7 @@ func cmdHandler() {
 		case cli := <-entering:
 			clients[cli] = true
 			rootpath[cli], _ = os.Getwd() //接続時のディレクトリを仮想rootpathにする.
-			cli <- "220 FTP server Ready\n"
+			cli <- "220 FTP server Ready"
 		case cli := <-leaving:
 			fmt.Printf("回線クローズ\n")
 			delete(clients, cli)
