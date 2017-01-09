@@ -32,6 +32,8 @@ func main() {
 
 	file, err := os.Open(inputfile)
 
+	defer file.Close()
+
 	if err != nil {
 		fmt.Println("ファイルが存在しません\n")
 		return
