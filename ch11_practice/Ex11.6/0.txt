@@ -1,0 +1,10 @@
+PASS
+BenchmarkPopCount-4              	300000000	         5.87 ns/op
+BenchmarkPopCountByLoop-4        	100000000	        15.5 ns/op
+BenchmarkPopCountByShifting-4    	20000000	        75.6 ns/op
+BenchmarkPopCountByClearing-4    	1000000000	         2.84 ns/op
+BenchmarkPopCountAllF-4          	300000000	         5.25 ns/op
+BenchmarkPopCountByLoopAllF-4    	100000000	        14.4 ns/op
+BenchmarkPopCountByShiftingAllF-4	20000000	        83.7 ns/op
+BenchmarkPopCountByClearingAllF-4	30000000	        49.7 ns/op
+ok  	github.com/kentarotak/Go_Practice/ch11_practice/Ex11.6	15.584s
