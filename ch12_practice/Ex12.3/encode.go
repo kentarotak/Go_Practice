@@ -15,6 +15,7 @@ import (
 // Marshal encodes a Go value in S-expression form.
 func Marshal(v interface{}) ([]byte, error) {
 	var buf bytes.Buffer
+
 	if err := encode(&buf, reflect.ValueOf(v)); err != nil {
 		return nil, err
 	}
