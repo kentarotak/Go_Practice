@@ -15,7 +15,6 @@ import (
 // Marshal encodes a Go value in S-expression form.
 func Marshal(v interface{}) ([]byte, error) {
 	var buf bytes.Buffer
-
 	if err := encode(&buf, reflect.ValueOf(v)); err != nil {
 		return nil, err
 	}
@@ -63,7 +62,11 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 			if i > 0 {
 				buf.WriteByte(' ')
 			}
-			fmt.Fprintf(buf, "(%s ", v.Type().Field(i).Name)
+
+			// フィールドタグを用いる.
+			tag := v.Type().Field(i).Tag
+			name := tag.Get("sexpr")
+			fmt.Fprintf(buf, "(%s ", name)
 			if err := encode(buf, v.Field(i)); err != nil {
 				return err
 			}
@@ -88,27 +91,6 @@ func encode(buf *bytes.Buffer, v reflect.Value) error {
 			buf.WriteByte(')')
 		}
 		buf.WriteByte(')')
-
-		// ここから追加
-	case reflect.Bool:
-		val := v.Bool()
-
-		if val == true {
-			buf.WriteString("t")
-		} else {
-			buf.WriteString("nil")
-		}
-
-	case reflect.Float32, reflect.Float64:
-		fmt.Fprintf(buf, "%f", v.Float())
-
-	case reflect.Complex64, reflect.Complex128:
-		cmp := v.Complex()
-
-		fmt.Fprintf(buf, "#C(%f %f)", real(cmp), imag(cmp))
-
-	case reflect.Interface:
-		fmt.Fprintf(buf, "('%s' (%s))", v.Type(), v.Type().String())
 
 	default: // float, complex, bool, chan, func, interface
 		return fmt.Errorf("unsupported type: %s", v.Type())
