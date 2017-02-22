@@ -1,22 +1,14 @@
 package main
 
 import (
-	"log"
+	"io"
 	"os"
-	"os/exec"
+
+	"github.com/kentarotak/Go_Practice/ch13_practice/Ex13.4/bzipcmd"
 )
 
 func main() {
+	w := bzip2exe.NewWriter(os.Stdout)
 
-	cmd := exec.Command("bzip2", "-c")
-	cmd.Stdin = os.Stdin
-
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-	err := cmd.Run()
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
+	io.Copy(w, os.Stdin)
 }
